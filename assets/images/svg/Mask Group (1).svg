@@ -1,0 +1,10 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask Group">
+<mask id="mask0_330_528" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="56" height="56">
+<rect id="Rectangle 203" width="56" height="56" rx="8" fill="#4485FD"/>
+</mask>
+<g mask="url(#mask0_330_528)">
+<circle id="Ellipse 11" r="19" fill="#B79CFF"/>
+</g>
+</g>
+</svg>
