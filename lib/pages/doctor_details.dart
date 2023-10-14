@@ -11,53 +11,57 @@ class TopDoctorDetails extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            alignment: Alignment.topCenter,
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: BoxDecoration(
-                color: Colors.grey,
-                image: DecorationImage(
-                    image: AssetImage(
-                        'assets/images/png/${args.topDoctorPicture}'))),
-            child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        height: 24,
-                        width: 24,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'assets/images/png/Icons-Back 1.png'),
+          Hero(
+            tag: 'assets/images/png/${args.topDoctorPicture}',
+            child: Container(
+              alignment: Alignment.topCenter,
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                          'assets/images/png/${args.topDoctorPicture}'))),
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 24,
+                          width: 24,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/png/Icons-Back 1.png'),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        height: 24,
-                        width: 24,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'assets/images/png/Icons-Artboard 31 1.png'),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 24,
+                          width: 24,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/png/Icons-Artboard 31 1.png'),
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -71,14 +75,20 @@ class TopDoctorDetails extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                Text(
-                  args.topDoctorName,
-                  style: const TextStyle(
-                    color: Color(0xFF25282B),
-                    fontSize: 24,
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w700,
-                    height: 0.06,
+                Hero(
+                  tag: args.topDoctorName,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      args.topDoctorName,
+                      style: const TextStyle(
+                        color: Color(0xFF25282B),
+                        fontSize: 24,
+                        fontFamily: 'Lato',
+                        fontWeight: FontWeight.w700,
+                        height: 0.06,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -99,7 +109,7 @@ class TopDoctorDetails extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  '${args.topDoctorName} • ${args.topDoctorDescription}',
+                  args.topDoctorDescription,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 5,
                   style: const TextStyle(
@@ -119,7 +129,7 @@ class TopDoctorDetails extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Experience',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -138,7 +148,7 @@ class TopDoctorDetails extends StatelessWidget {
                             children: [
                               Text(
                                 args.topDoctorYearOfExperience,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFF2B92E4),
                                   fontSize: 24,
                                   fontFamily: 'Source Sans Pro',
@@ -149,7 +159,7 @@ class TopDoctorDetails extends StatelessWidget {
                               const SizedBox(
                                 width: 4,
                               ),
-                              Text(
+                              const Text(
                                 'yr',
                                 style: TextStyle(
                                   color: Color(0xFFAAAAAA),
@@ -172,7 +182,7 @@ class TopDoctorDetails extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Patient',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -191,7 +201,7 @@ class TopDoctorDetails extends StatelessWidget {
                             children: [
                               Text(
                                 args.topDoctorNumberOfPatient,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFF2B92E4),
                                   fontSize: 24,
                                   fontFamily: 'Source Sans Pro',
@@ -202,7 +212,7 @@ class TopDoctorDetails extends StatelessWidget {
                               const SizedBox(
                                 width: 4,
                               ),
-                              Text(
+                              const Text(
                                 'ps',
                                 style: TextStyle(
                                   color: Color(0xFFAAAAAA),
@@ -225,7 +235,7 @@ class TopDoctorDetails extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Rating',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -244,7 +254,7 @@ class TopDoctorDetails extends StatelessWidget {
                             children: [
                               Text(
                                 args.topDoctorRating,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFF2B92E4),
                                   fontSize: 24,
                                   fontFamily: 'Source Sans Pro',
@@ -269,7 +279,7 @@ class TopDoctorDetails extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xFF4485FD),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage(
                             'assets/images/png/Icons-comment.png',
                           ),
@@ -286,7 +296,7 @@ class TopDoctorDetails extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xFF00CC6A),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'Make an Appointment',
                           style: TextStyle(

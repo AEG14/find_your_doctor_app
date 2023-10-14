@@ -26,15 +26,18 @@ class TopDoctorsCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              width: 88,
-              height: 80,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/images/png/${doctor!.topDoctorPicture}',
+            Hero(
+              tag: 'assets/images/png/${doctor!.topDoctorPicture}',
+              child: Container(
+                width: 88,
+                height: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      'assets/images/png/${doctor!.topDoctorPicture}',
+                    ),
                   ),
                 ),
               ),
@@ -47,16 +50,22 @@ class TopDoctorsCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    doctor!.topDoctorName,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                    style: TextStyle(
-                      color: Color(0xFF404345),
-                      fontSize: 16,
-                      fontFamily: 'Lato',
-                      fontWeight: FontWeight.w700,
-                      height: 2.0,
+                  Hero(
+                    tag: doctor!.topDoctorName,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: Text(
+                        doctor!.topDoctorName,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: TextStyle(
+                          color: Color(0xFF404345),
+                          fontSize: 16,
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w700,
+                          height: 2.0,
+                        ),
+                      ),
                     ),
                   ),
                   Text(
