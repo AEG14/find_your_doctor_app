@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/' : (context) => const MyHomePage(),
-        '/doctor_details' : (context) => const TopDoctorDetails(),
+        '/': (context) => const MyHomePage(),
+        '/doctor_details': (context) => const TopDoctorDetails(),
       },
     );
   }
