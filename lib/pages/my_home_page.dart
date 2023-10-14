@@ -3,7 +3,7 @@ import '../widgets/list_of_top_doctors.dart';
 import '../widgets/mini_profile_card.dart';
 import '../widgets/search_box.dart';
 import '../widgets/category_card.dart';
-import '../arrayData/CategoryArray.dart';
+import '../doctors_model/grid_menu_data.dart';
 // import 'package:google_fonts/google_fonts';
 
 class MyHomePage extends StatefulWidget {
