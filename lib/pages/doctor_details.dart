@@ -102,9 +102,9 @@ class TopDoctorDetails extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  '${args.topDoctorName} • ${args.topDoctorDescription}',
+                  args.topDoctorDescription,
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 5,
+                  maxLines: 6,
                   style: const TextStyle(
                     color: Color(0xFFAAAAAA),
                     fontSize: 14,
