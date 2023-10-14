@@ -28,7 +28,7 @@ class TopDoctorDetails extends StatelessWidget {
                     horizontal: 30,
                   ),
                   child: Container(
-                    margin: const EdgeInsets.only(top: 16),
+                    margin: const EdgeInsets.only(top: 26),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
