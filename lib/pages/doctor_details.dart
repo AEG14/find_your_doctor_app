@@ -223,32 +223,6 @@ class TopDoctorDetails extends StatelessWidget {
                               ],
                             ),
                           ),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: args.topDoctorNumberOfPatient,
-                                  style: TextStyle(
-                                    color: Color(0xFF2B92E4),
-                                    fontSize: 24,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.06,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: " ps",
-                                  style: TextStyle(
-                                    color: Color(0xFFAAAAAA),
-                                    fontSize: 14,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                       const SizedBox(
