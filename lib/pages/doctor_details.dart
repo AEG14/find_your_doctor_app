@@ -17,7 +17,7 @@ class TopDoctorDetails extends StatelessWidget {
               alignment: Alignment.topCenter,
               height: MediaQuery.of(context).size.height * 0.5,
               decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: Color(0xFFEAEAEA),
                   image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
