@@ -58,13 +58,23 @@ class DoctorDetailsScreen extends StatelessWidget {
                               color: Color(0XFFAAAAAA)),
                           textAlign: TextAlign.left,
                         ),
-                        Text(
-                          "  ●  ",
-                          style: GoogleFonts.lato(
-                              fontSize: 14,
-                              fontWeight: FontWeight.normal,
-                              color: Color(0XFFAAAAAA)),
-                          textAlign: TextAlign.left,
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Container(
+                          height: 4,
+                          width: 4,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/png/smallGreyDot.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8,
                         ),
                         Text(
                           "Persahabatan Hospital",
