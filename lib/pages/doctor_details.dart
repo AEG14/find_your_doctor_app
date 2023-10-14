@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'my_home_page.dart';
 
 class DoctorDetailsScreen extends StatelessWidget {
   const DoctorDetailsScreen({super.key});
@@ -11,17 +12,55 @@ class DoctorDetailsScreen extends StatelessWidget {
         child: Column(children: [
           Container(
             height: 375,
-            child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/png/doc1.png'),
-                  fit: BoxFit.cover,
+            child: Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/png/doc1.png'),
+                      fit: BoxFit.cover,
+                    ),
+                    color: Color(0XFFEAEAEA),
+                  ),
                 ),
-                color: Color(0XFFEAEAEA),
-              ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(30, 56, 30, 56),
+                  height: 24,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => MyHomePage(),
+                          ));
+                        },
+                        child: Container(
+                          width: 24,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage('assets/images/png/Btn_back.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 24,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/images/png/Btn_bookmark.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
             ),
-
-            //more sa diri nga container
           ),
           SizedBox(height: 24),
           Expanded(
@@ -144,7 +183,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            width: 14,
+                            width: 6,
                           ),
                           VerticalDivider(
                             color: Color(0xFFCACCCF),
@@ -153,7 +192,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                             endIndent: 15,
                           ),
                           SizedBox(
-                            width: 14,
+                            width: 6,
                           ),
                           Container(
                             width: 90,
@@ -192,7 +231,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            width: 14,
+                            width: 6,
                           ),
                           VerticalDivider(
                             color: Color(0xFFCACCCF),
