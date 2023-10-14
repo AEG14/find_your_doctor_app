@@ -26,6 +26,7 @@ class SearchBox extends StatelessWidget {
                   hintText: 'Search doctors, medicines etc',
                   hintStyle: GoogleFonts.lato(
                     fontWeight: FontWeight.w400,
+                    fontSize: 14,
                     color: Color(0xFFCACCCF),
                   ),
                   border: InputBorder.none,

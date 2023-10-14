@@ -17,19 +17,18 @@ class TopDoctorsCard extends StatelessWidget {
         child: Text('No Doctor Data Available'),
       );
     }
-
     return Padding(
       padding: EdgeInsets.only(bottom: 16),
       child: Container(
         color: Colors.transparent,
-        height: 88,
+        height: 80,
         width: MediaQuery.of(context).size.width - 32,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: 88,
-              height: 88,
+              height: 80,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 image: DecorationImage(
@@ -61,7 +60,7 @@ class TopDoctorsCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${doctor!.topDoctorSpecialty}  • ${doctor!.topDoctorHospital}',
+                    '${doctor!.topDoctorSpecialty} • ${doctor!.topDoctorHospital}',
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     style: TextStyle(
@@ -93,12 +92,12 @@ class TopDoctorsCard extends StatelessWidget {
                             },
                             unratedColor: Colors.grey,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10, // Add spacing of 10 pixels
                           ),
                           Text(
                             '(${doctor!.topDoctorNumberOfPatient})',
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: Color(0xFFAAAAAA),
                               fontSize: 14,
                               fontFamily: 'Source Sans Pro',
@@ -109,18 +108,22 @@ class TopDoctorsCard extends StatelessWidget {
                       ),
                       Container(
                         height: 24,
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 13,
                           vertical: 3,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
-                          color: Color(0xFFCCF5E1),
+                          color: doctor!.isDoctorOpen
+                              ? Color(0xFFCCF5E1)
+                              : Color(0xFFF7E4D9),
                         ),
                         child: Text(
-                          'Open',
+                          doctor!.isDoctorOpen ? 'Open' : 'Close',
                           style: TextStyle(
-                            color: Color(0xFF00CC6A),
+                            color: doctor!.isDoctorOpen
+                                ? Color(0xFF00CC6A)
+                                : Color(0xFFCC4900),
                             fontSize: 12,
                             fontFamily: 'Lato',
                             fontWeight: FontWeight.w400,
