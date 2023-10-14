@@ -114,7 +114,7 @@ class TopDoctorDetails extends StatelessWidget {
                 Text(
                   args.topDoctorDescription,
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 5,
+                  maxLines: 6,
                   style: const TextStyle(
                     color: Color(0xFFAAAAAA),
                     fontSize: 14,
@@ -280,7 +280,7 @@ class TopDoctorDetails extends StatelessWidget {
                         color: Color(0xFF4485FD),
                         image: const DecorationImage(
                           image: AssetImage(
-                            'assets/images/png/Icons-Comment2.png',
+                            'assets/images/png/Icons-Comment.png',
                           ),
                         ),
                       ),
