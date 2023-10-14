@@ -15,7 +15,7 @@ class TopDoctorDetails extends StatelessWidget {
             alignment: Alignment.topCenter,
             height: MediaQuery.of(context).size.height * 0.5,
             decoration: BoxDecoration(
-                color: Colors.grey,
+                color: Color(0XFFEAEAEA),
                 image: DecorationImage(
                     image: AssetImage(
                         'assets/images/png/${args.topDoctorPicture}'))),
@@ -24,40 +24,43 @@ class TopDoctorDetails extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(
                   horizontal: 30,
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        height: 24,
-                        width: 24,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'assets/images/png/Icons-Back 1.png'),
+                child: Container(
+                  margin: const EdgeInsets.only(top: 16),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 24,
+                          width: 24,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/png/Icons-Back 1.png'),
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        height: 24,
-                        width: 24,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                                'assets/images/png/Icons-Artboard 31 1.png'),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 24,
+                          width: 24,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/png/Icons-Artboard 31 1.png'),
+                            ),
                           ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -131,36 +134,34 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 35,
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                args.topDoctorYearOfExperience,
-                                style: TextStyle(
-                                  color: Color(0xFF2B92E4),
-                                  fontSize: 24,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.06,
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: args.topDoctorYearOfExperience,
+                                  style: TextStyle(
+                                    color: Color(0xFF2B92E4),
+                                    fontSize: 24,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.06,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              Text(
-                                'yr',
-                                style: TextStyle(
-                                  color: Color(0xFFAAAAAA),
-                                  fontSize: 14,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.18,
+                                TextSpan(
+                                  text: " yr",
+                                  style: TextStyle(
+                                    color: Color(0xFFAAAAAA),
+                                    fontSize: 14,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.18,
+                                  ),
                                 ),
-                              )
-                            ],
-                          )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -184,36 +185,34 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 35,
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                args.topDoctorNumberOfPatient,
-                                style: TextStyle(
-                                  color: Color(0xFF2B92E4),
-                                  fontSize: 24,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.06,
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: args.topDoctorNumberOfPatient,
+                                  style: TextStyle(
+                                    color: Color(0xFF2B92E4),
+                                    fontSize: 24,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.06,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              Text(
-                                'ps',
-                                style: TextStyle(
-                                  color: Color(0xFFAAAAAA),
-                                  fontSize: 14,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.18,
+                                TextSpan(
+                                  text: " ps",
+                                  style: TextStyle(
+                                    color: Color(0xFFAAAAAA),
+                                    fontSize: 14,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.18,
+                                  ),
                                 ),
-                              )
-                            ],
-                          )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -237,7 +236,7 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 27,
                           ),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -271,7 +270,7 @@ class TopDoctorDetails extends StatelessWidget {
                         color: Color(0xFF4485FD),
                         image: DecorationImage(
                           image: AssetImage(
-                            'assets/images/png/Icons-comment.png',
+                            'assets/images/png/Icons-Comment2.png',
                           ),
                         ),
                       ),
