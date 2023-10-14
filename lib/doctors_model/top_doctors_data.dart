@@ -7,7 +7,8 @@ class Doctor {
       this.topDoctorNumberOfPatient = '',
       this.topDoctorYearOfExperience = '',
       this.topDoctorDescription = '',
-      this.topDoctorPicture = ''});
+      this.topDoctorPicture = '',
+      this.isDoctorOpen = false});
   String topDoctorName;
   String topDoctorSpecialty;
   String topDoctorRating;
@@ -16,6 +17,7 @@ class Doctor {
   String topDoctorYearOfExperience;
   String topDoctorDescription;
   String topDoctorPicture;
+  bool isDoctorOpen;
 }
 
 var topDoctors = [
@@ -29,6 +31,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Gilang is one of the best doctors in the Persahabatan Hospital. He has saved more than 1000 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor1.png',
+    isDoctorOpen: true,
   ),
   Doctor(
     topDoctorName: 'dr. Shabil Chan',
@@ -40,6 +43,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor2.png',
+    isDoctorOpen: true,
   ),
   Doctor(
     topDoctorName: 'dr. Mustakim',
@@ -51,6 +55,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor3.png',
+    isDoctorOpen: false,
   ),
   Doctor(
     topDoctorName: 'dr. Suprihatini',
@@ -62,6 +67,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor4.png',
+    isDoctorOpen: true,
   ),
   Doctor(
     topDoctorName: 'dr. Suprihatini',
@@ -73,6 +79,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor4.png',
+    isDoctorOpen: false,
   ),
   Doctor(
     topDoctorName: 'dr. Suprihatini',
@@ -84,6 +91,7 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor4.png',
+    isDoctorOpen: true,
   ),
   Doctor(
     topDoctorName: 'dr. Suprihatini',
@@ -95,5 +103,6 @@ var topDoctors = [
     topDoctorDescription:
         'dr. Shabil is one of the best doctors in the Columbia Hospital. He has saved more than 900 patients in the past 3 years. He has also received many awards from domestic and abroad as the best doctors. He is available on a private or schedule. ',
     topDoctorPicture: 'doctor4.png',
+    isDoctorOpen: true,
   ),
 ];
