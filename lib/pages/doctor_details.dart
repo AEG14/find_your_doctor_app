@@ -94,7 +94,127 @@ class DoctorDetailsScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 39.0, right: 39),
                     child: Container(
                       height: 72,
-                      child: Row(),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 90,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Experience",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0XFF25282B)),
+                                ),
+                                SizedBox(height: 8),
+                                RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: "3 ",
+                                        style: GoogleFonts.lato(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 24,
+                                          color: Color(0xFF2B92E4),
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "yr",
+                                        style: GoogleFonts.lato(
+                                          fontSize: 14,
+                                          color: Color(0xFFAAAAAA),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 14,
+                          ),
+                          VerticalDivider(
+                            color: Color(0xFFCACCCF),
+                            width: 1,
+                            indent: 6,
+                            endIndent: 15,
+                          ),
+                          SizedBox(
+                            width: 14,
+                          ),
+                          Container(
+                            width: 90,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Patient",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0XFF25282B)),
+                                ),
+                                SizedBox(height: 8),
+                                RichText(
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: "1221 ",
+                                        style: GoogleFonts.lato(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 24,
+                                          color: Color(0xFF2B92E4),
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "ps",
+                                        style: GoogleFonts.lato(
+                                          fontSize: 14,
+                                          color: Color(0xFFAAAAAA),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: 14,
+                          ),
+                          VerticalDivider(
+                            color: Color(0xFFCACCCF),
+                            width: 1,
+                            indent: 6,
+                            endIndent: 15,
+                          ),
+                          Container(
+                            width: 90,
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Rating",
+                                  style: GoogleFonts.lato(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                      color: Color(0XFF25282B)),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  "5.0",
+                                  style: GoogleFonts.lato(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 24,
+                                    color: Color(0xFF2B92E4),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
