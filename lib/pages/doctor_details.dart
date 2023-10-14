@@ -141,36 +141,34 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 35,
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                args.topDoctorYearOfExperience,
-                                style: const TextStyle(
-                                  color: Color(0xFF2B92E4),
-                                  fontSize: 24,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.06,
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: args.topDoctorYearOfExperience,
+                                  style: TextStyle(
+                                    color: Color(0xFF2B92E4),
+                                    fontSize: 24,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.06,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              const Text(
-                                'yr',
-                                style: TextStyle(
-                                  color: Color(0xFFAAAAAA),
-                                  fontSize: 14,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.18,
+                                TextSpan(
+                                  text: " yr",
+                                  style: TextStyle(
+                                    color: Color(0xFFAAAAAA),
+                                    fontSize: 14,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.18,
+                                  ),
                                 ),
-                              )
-                            ],
-                          )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -194,36 +192,34 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 35,
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                args.topDoctorNumberOfPatient,
-                                style: const TextStyle(
-                                  color: Color(0xFF2B92E4),
-                                  fontSize: 24,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.06,
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: args.topDoctorNumberOfPatient,
+                                  style: TextStyle(
+                                    color: Color(0xFF2B92E4),
+                                    fontSize: 24,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.06,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              const Text(
-                                'ps',
-                                style: TextStyle(
-                                  color: Color(0xFFAAAAAA),
-                                  fontSize: 14,
-                                  fontFamily: 'Source Sans Pro',
-                                  fontWeight: FontWeight.w400,
-                                  height: 0.18,
+                                TextSpan(
+                                  text: " ps",
+                                  style: TextStyle(
+                                    color: Color(0xFFAAAAAA),
+                                    fontSize: 14,
+                                    fontFamily: 'Source Sans Pro',
+                                    fontWeight: FontWeight.w400,
+                                    height: 0.18,
+                                  ),
                                 ),
-                              )
-                            ],
-                          )
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                       const SizedBox(
@@ -247,7 +243,7 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 27,
                           ),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.end,
