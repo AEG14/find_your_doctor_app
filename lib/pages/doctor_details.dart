@@ -11,21 +11,22 @@ class TopDoctorDetails extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            alignment: Alignment.topCenter,
-            height: MediaQuery.of(context).size.height * 0.5,
-            decoration: BoxDecoration(
-                color: Color(0XFFEAEAEA),
-                image: DecorationImage(
-                    image: AssetImage(
-                        'assets/images/png/${args.topDoctorPicture}'))),
-            child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: Container(
-                  margin: const EdgeInsets.only(top: 16),
+          Hero(
+            tag: 'assets/images/png/${args.topDoctorPicture}',
+            child: Container(
+              alignment: Alignment.topCenter,
+              height: MediaQuery.of(context).size.height * 0.5,
+              decoration: BoxDecoration(
+                  color: Colors.grey,
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage(
+                          'assets/images/png/${args.topDoctorPicture}'))),
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 30,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -74,14 +75,20 @@ class TopDoctorDetails extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                Text(
-                  args.topDoctorName,
-                  style: const TextStyle(
-                    color: Color(0xFF25282B),
-                    fontSize: 24,
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w700,
-                    height: 0.06,
+                Hero(
+                  tag: args.topDoctorName,
+                  child: Material(
+                    color: Colors.transparent,
+                    child: Text(
+                      args.topDoctorName,
+                      style: const TextStyle(
+                        color: Color(0xFF25282B),
+                        fontSize: 24,
+                        fontFamily: 'Lato',
+                        fontWeight: FontWeight.w700,
+                        height: 0.06,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -104,7 +111,7 @@ class TopDoctorDetails extends StatelessWidget {
                 Text(
                   args.topDoctorDescription,
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 6,
+                  maxLines: 5,
                   style: const TextStyle(
                     color: Color(0xFFAAAAAA),
                     fontSize: 14,
@@ -122,7 +129,7 @@ class TopDoctorDetails extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Experience',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -134,34 +141,36 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 35,
+                            height: 20,
                           ),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: args.topDoctorYearOfExperience,
-                                  style: TextStyle(
-                                    color: Color(0xFF2B92E4),
-                                    fontSize: 24,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.06,
-                                  ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                args.topDoctorYearOfExperience,
+                                style: const TextStyle(
+                                  color: Color(0xFF2B92E4),
+                                  fontSize: 24,
+                                  fontFamily: 'Source Sans Pro',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.06,
                                 ),
-                                TextSpan(
-                                  text: " yr",
-                                  style: TextStyle(
-                                    color: Color(0xFFAAAAAA),
-                                    fontSize: 14,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.18,
-                                  ),
+                              ),
+                              const SizedBox(
+                                width: 4,
+                              ),
+                              const Text(
+                                'yr',
+                                style: TextStyle(
+                                  color: Color(0xFFAAAAAA),
+                                  fontSize: 14,
+                                  fontFamily: 'Source Sans Pro',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.18,
                                 ),
-                              ],
-                            ),
-                          ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                       const SizedBox(
@@ -173,7 +182,7 @@ class TopDoctorDetails extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Patient',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -185,34 +194,36 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 35,
+                            height: 20,
                           ),
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: args.topDoctorNumberOfPatient,
-                                  style: TextStyle(
-                                    color: Color(0xFF2B92E4),
-                                    fontSize: 24,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.06,
-                                  ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                args.topDoctorNumberOfPatient,
+                                style: const TextStyle(
+                                  color: Color(0xFF2B92E4),
+                                  fontSize: 24,
+                                  fontFamily: 'Source Sans Pro',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.06,
                                 ),
-                                TextSpan(
-                                  text: " ps",
-                                  style: TextStyle(
-                                    color: Color(0xFFAAAAAA),
-                                    fontSize: 14,
-                                    fontFamily: 'Source Sans Pro',
-                                    fontWeight: FontWeight.w400,
-                                    height: 0.18,
-                                  ),
+                              ),
+                              const SizedBox(
+                                width: 4,
+                              ),
+                              const Text(
+                                'ps',
+                                style: TextStyle(
+                                  color: Color(0xFFAAAAAA),
+                                  fontSize: 14,
+                                  fontFamily: 'Source Sans Pro',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0.18,
                                 ),
-                              ],
-                            ),
-                          ),
+                              )
+                            ],
+                          )
                         ],
                       ),
                       const SizedBox(
@@ -224,7 +235,7 @@ class TopDoctorDetails extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             'Rating',
                             style: TextStyle(
                               color: Color(0xFF25282B),
@@ -236,14 +247,14 @@ class TopDoctorDetails extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(
-                            height: 27,
+                            height: 20,
                           ),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               Text(
                                 args.topDoctorRating,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Color(0xFF2B92E4),
                                   fontSize: 24,
                                   fontFamily: 'Source Sans Pro',
@@ -268,9 +279,9 @@ class TopDoctorDetails extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xFF4485FD),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage(
-                            'assets/images/png/Icons-Comment2.png',
+                            'assets/images/png/Icons-comment.png',
                           ),
                         ),
                       ),
@@ -285,7 +296,7 @@ class TopDoctorDetails extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xFF00CC6A),
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'Make an Appointment',
                           style: TextStyle(
