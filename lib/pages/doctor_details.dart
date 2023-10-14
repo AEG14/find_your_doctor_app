@@ -280,7 +280,7 @@ class TopDoctorDetails extends StatelessWidget {
                         color: Color(0xFF4485FD),
                         image: const DecorationImage(
                           image: AssetImage(
-                            'assets/images/png/Icons-Comment.png',
+                            'assets/images/png/Icons-Comment2.png',
                           ),
                         ),
                       ),
