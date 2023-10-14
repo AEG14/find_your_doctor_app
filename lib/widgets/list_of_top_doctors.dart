@@ -13,7 +13,19 @@ class ListOfTopDoctors extends StatelessWidget {
       itemCount: topDoctors.length,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).pushNamed('/doctor_details', arguments: Doctor(
+              topDoctorName: topDoctors[index].topDoctorName,
+              topDoctorDescription: topDoctors[index].topDoctorDescription,
+              topDoctorHospital: topDoctors[index].topDoctorHospital,
+              isDoctorOpen: topDoctors[index].isDoctorOpen,
+              topDoctorNumberOfPatient: topDoctors[index].topDoctorNumberOfPatient,
+              topDoctorPicture: topDoctors[index].topDoctorPicture,
+              topDoctorRating: topDoctors[index].topDoctorRating,
+              topDoctorSpecialty: topDoctors[index].topDoctorSpecialty,
+              topDoctorYearOfExperience: topDoctors[index].topDoctorYearOfExperience,
+            ));
+          },
           child: TopDoctorsCard(
             doctor: topDoctors[index],
           ),
