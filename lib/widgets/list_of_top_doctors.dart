@@ -4,7 +4,7 @@ import '../doctors_model/top_doctors_data.dart';
 import 'top_doctors_card.dart';
 
 class ListOfTopDoctors extends StatelessWidget {
-  const ListOfTopDoctors({super.key});
+  const ListOfTopDoctors({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,9 @@ class ListOfTopDoctors extends StatelessWidget {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {},
-          child: TopDoctorsCard(),
+          child: TopDoctorsCard(
+            doctor: topDoctors[index],
+          ),
         );
       },
     );
