@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/doctor_details.dart';
 import 'pages/my_home_page.dart';
 
 void main() {
@@ -14,11 +15,16 @@ class MyApp extends StatelessWidget {
     //create: (context) => MyAppState(),
     return MaterialApp(
       title: 'Find Your Doctor App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => const MyHomePage(),
+        '/doctor_details' : (context) => const TopDoctorDetails(),
+      },
     );
   }
 }
